@@ -9,5 +9,14 @@ function createGrid(size) { //создаем сетку
         cell.classList.add('grid-cell'); //применяем grid-cell из css
         cell.style.width = `${cellSize}px`;
         cell.style.height = `${cellSize}px`;
-    }
+    
+
+    cell.addEventListener('mouseover', () => { //при наведении на клетку она окрасится в черный
+        cell.style.backgroundColor = 'black';
+    });
+
+    container.appendChild(cell); //клетка будет внутри контейнера
 }
+}
+
+createGrid (15); // функция с 15ю клетками
