@@ -11,3 +11,7 @@ body {
     border: solid;
     margin-top: 20px;
 }
+.grid-cell {
+    box-sizing: border-box;
+    border: solid;
+}
