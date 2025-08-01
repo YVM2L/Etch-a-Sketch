@@ -19,4 +19,4 @@ function createGrid(size) { //создаем сетку
 }
 }
 
-createGrid (15); // функция с 15ю клетками
+createGrid (16); // функция с 16ю клетками
