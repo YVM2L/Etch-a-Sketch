@@ -12,12 +12,21 @@ function createGrid(size) { //создаем сетку
     
 
     cell.addEventListener('mouseover', () => { //при наведении на клетку она окрасится в черный
-        cell.style.backgroundColor = 'black';
+        cell.style.backgroundColor = getRandomRGB(); //теперь будет случайный цвет, был черный
+        //забыл () после getRandomRGB. полчаса поиска почему курсор не окрашивает клетку.
     });
 
     container.appendChild(cell); //клетка будет внутри контейнера
 }
 }
+//берем рандомное число от 0 до числа стремящегося к 1, умножаем на рандомное значение из 256 оттенков
+//делаем это для красного, зеленого и синего, смешиваем их и полученный результат возвращаем в mouseover
+function getRandomRGB () { 
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+};
 
 createGrid (16); // функция с 16ю клетками
 
