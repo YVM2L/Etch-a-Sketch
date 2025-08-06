@@ -13,7 +13,7 @@ body {
 }
 .grid-cell {
     box-sizing: border-box;
-    border: solid;
+    border: 1px solid;
 }
 button {
     margin: 10px;
