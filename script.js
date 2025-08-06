@@ -20,3 +20,11 @@ function createGrid(size) { //создаем сетку
 }
 
 createGrid (16); // функция с 16ю клетками
+
+//сбрасываем клетки
+document.getElementById('clear').addEventListener('click', () => { //находим кнопку и запускаем кликом
+    const cells = document.querySelectorAll('.grid-cell'); //находим все все клетки и объединяем в общее cells
+    cells.forEach(cell => {
+        cell.style.backgroundColor = ''; //в cells перебрали и очистили каждую клетку
+    });
+});
