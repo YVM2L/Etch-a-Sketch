@@ -9,11 +9,17 @@ function createGrid(size) { //создаем сетку
         cell.classList.add('grid-cell'); //применяем grid-cell из css
         cell.style.width = `${cellSize}px`;
         cell.style.height = `${cellSize}px`;
+        cell.dataset.opacity = 1; //теперь клетка дефолтно непрозрачная
+        cell.style.height = 1
     
 
     cell.addEventListener('mouseover', () => { //при наведении на клетку она окрасится в черный
         cell.style.backgroundColor = getRandomRGB(); //теперь будет случайный цвет, был черный
         //забыл () после getRandomRGB. полчаса поиска почему курсор не окрашивает клетку.
+        let currentOpacity = parseFloat(cell.dataset.opacity) || 1; //берем дефолтную прозрачность, если не задана то равна 1
+        currentOpacity = Math.max(currentOpacity - 0.1, 0); //уменьшается на 0.1 за раз, но не быть меньше 0
+        cell.dataset.opacity = currentOpacity;
+        cell.style.opacity = currentOpacity;
     });
 
     container.appendChild(cell); //клетка будет внутри контейнера
