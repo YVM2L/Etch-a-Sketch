@@ -1,21 +1,21 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 800px;
-    height: 800px;
-    border: solid;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 800px;
+  border: solid;
+  margin-top: 20px;
 }
 .grid-cell {
-    box-sizing: border-box;
-    border: 1px solid;
+  box-sizing: border-box;
+  border: 1px solid;
 }
 button {
-    margin: 10px;
-    padding: 8px;
+  margin: 10px;
+  padding: 8px;
 }
